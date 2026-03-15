@@ -4,12 +4,13 @@
         <h1>
             Create New Task
         </h1>
-        <form action="">
+        <form action="{{url('/task')}}" method="POST">
+            @csrf
             <label for="name">Name</label>
-            <input type="text" name="name" id="">
+            <input type="text" name="name" id="name">
             <br>
             <label for="description">Description</label>
-            <textarea name="description" id="" cols="30" rows="10"></textarea>
+            <textarea name="description" id="description" cols="30" rows="10"></textarea>
             <br>
             <button type="submit">Create Task</button>
         </form>
